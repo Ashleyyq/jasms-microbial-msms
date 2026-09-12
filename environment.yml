@@ -1,0 +1,27 @@
+name: bacterial-apd-jasms
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+      - peptdeep==1.4.1
+      - alphabase==1.8.1
+      - numpy==1.26.4
+      - pandas==2.3.3
+      - scipy==1.13.1
+      - torch==2.7.1
+      - transformers==4.57.6
+      - scikit-learn==1.6.1
+      - requests==2.32.5
+      - pyyaml==6.0.3
+      - pillow==11.3.0
+      - reportlab==4.4.9
+      - pyteomics==4.7.5
+      - matplotlib==3.9.4
+      - h5py==3.14.0
+      - pyarrow==21.0.0
+
+# Portable direct-dependency specification. The exact epoch-10 jobs used the
+# CUDA build torch 2.7.1+cu118; use environment_lock/conda_explicit_*.txt for
+# platform-exact reconstruction. ReportLab is packaging-only.
