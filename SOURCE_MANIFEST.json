@@ -1,7 +1,7 @@
 {
   "candidate_date": "2026-09-11",
-  "source_description": "Verified private staging package; copied files unchanged",
-  "copied_files": {
+  "source_description": "Archived analysis code and environment files; documentation changes listed below",
+  "files": {
     "code/dda/convert_mzml_mzid_to_mgf.py": "913da4ef80777d3529d549e6acdd35d2b2dc66c0cdca287527a408785cedd978",
     "code/dda/eval_bacterial_hcd.py": "7be99ebf83232f917be1d2ea42c5e9bb5855875aaddd3fd7d4ce187e5938efee",
     "code/dda/eval_koina_bacterial.py": "c211c84d52f23e67948b749ed35dd0aa8a12901fbad2ce8507b440cb57ac4426",
@@ -31,9 +31,15 @@
     "code/dia/summarize_pyarrow.py": "37678da5ccaa6893480c8ca182fc377b65e0b3d3ee3f6459f06c1cbaff9c58a4",
     "code/dia/verify_carafe_seed_only_change.py": "b4c52e666d15e04fbb0f3f83faff067ec113c1c5a1be64affc778f1240794131",
     "code/dia/verify_summaries.py": "a1ada5a57b92bb83c2a8b76099756ddf64a098d0a377103537c3abaf10a8e5cd",
-    "environment.yml": "df8aa940ffec398efa86e275477228a820e555b9c3dbf140aa880e6298542000",
+    "environment.yml": "af79dfe74206356f87911f15b0d199284d348d78176837ff3761fb2a827112e0",
     "environment_lock/pip_freeze_epoch10_exact_run.txt": "10e18c67c1dd463d21a2a52fda9030d903143727756e6817ef966875d08e8780",
     "tools/test_apd_bundle_binding.py": "a91a49ca58e6284606077f880db6d4247ee723436c3735711ed16af8d817d37c"
+  },
+  "documentation_changes": {
+    "environment.yml": {
+      "source_sha256": "df8aa940ffec398efa86e275477228a820e555b9c3dbf140aa880e6298542000",
+      "description": "Clarified the included environment archive; dependency pins unchanged"
+    }
   },
   "excluded": [
     "manuscript",

@@ -9,8 +9,8 @@ import re
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DOCUMENTS = {"README.md", "USAGE.md", "SOFTWARE.md", "LICENSE", ".gitignore",
-             "SOURCE_MANIFEST.json", "tools/check_code_package.py"}
+DOCUMENTS = {"README.md", "USAGE.md", "SOFTWARE.md", "LICENSE", "CITATION.cff", ".gitignore",
+             "SOURCE_MANIFEST.json", "tools/check_code_package.py", "tools/test_code_package.py"}
 BAD_TEXT = (
     re.compile(r"/(?:Users|home)/[^/<]+/"),
     re.compile("/" + r"scratch/[^/<]+/"),
@@ -21,9 +21,9 @@ BAD_TEXT = (
 
 def check():
     manifest = json.loads((ROOT / "SOURCE_MANIFEST.json").read_text())
-    allowed = set(manifest["copied_files"]) | DOCUMENTS
+    allowed = set(manifest["files"]) | DOCUMENTS
     errors = []
-    for name in manifest["copied_files"]:
+    for name in manifest["files"]:
         if not re.fullmatch(r"code/(?:dda|dia)/[A-Za-z0-9_]+\.py", name) and name not in {
             "environment.yml", "environment_lock/pip_freeze_epoch10_exact_run.txt",
             "tools/test_apd_bundle_binding.py",
@@ -45,7 +45,7 @@ def check():
         if name not in allowed:
             errors.append(f"unexpected_file:{name}")
         data = path.read_bytes()
-        expected = manifest["copied_files"].get(name)
+        expected = manifest["files"].get(name)
         if expected and hashlib.sha256(data).hexdigest() != expected:
             errors.append(f"changed_source:{name}")
         try:

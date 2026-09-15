@@ -23,5 +23,6 @@ dependencies:
       - pyarrow==21.0.0
 
 # Portable direct-dependency specification. The exact epoch-10 jobs used the
-# CUDA build torch 2.7.1+cu118; use environment_lock/conda_explicit_*.txt for
-# platform-exact reconstruction. ReportLab is packaging-only.
+# CUDA build torch 2.7.1+cu118. The archived Python package list is in
+# environment_lock/pip_freeze_epoch10_exact_run.txt; it is not a complete
+# platform lockfile. ReportLab is packaging-only.

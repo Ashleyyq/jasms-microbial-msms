@@ -15,10 +15,11 @@ figures, result tables, experimental data and model weights are not included.
   summary verification, library-universe and seed checks.
 - `environment.yml`: direct dependency versions.
 - `environment_lock/`: the archived Python package list.
-- `SOURCE_MANIFEST.json`: hashes of the unchanged copied source files.
+- `SOURCE_MANIFEST.json`: source-file hashes and documentation changes.
 - `tools/`: package integrity and model-path regression checks.
 
 See [USAGE.md](USAGE.md) for the environment, inputs and main scripts.
+Citation information is in [CITATION.cff](CITATION.cff).
 
 ## Package checks
 

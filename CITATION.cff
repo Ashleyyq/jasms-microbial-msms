@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite this repository."
+title: "Microbial MS/MS model fine-tuning: analysis code"
+type: software
+license: BSD-2-Clause
+repository-code: "https://github.com/Ashleyyq/jasms-microbial-msms"
+abstract: "DDA model fine-tuning and spectrum-evaluation scripts, with utilities for comparing DIA identification workflows. Experimental data and model weights are not included."
+authors:
+  - family-names: Ou
+    given-names: Yongqi
+    orcid: "https://orcid.org/0009-0005-1946-2074"
+  - family-names: Gao
+    given-names: Yuqian
+  - family-names: Fuentes-Cabrera
+    given-names: Miguel
+  - family-names: Bilbao
+    given-names: Aivett
+keywords:
+  - microbial proteomics
+  - tandem mass spectrometry
+  - spectrum prediction
+  - AlphaPeptDeep
